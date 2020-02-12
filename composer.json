@@ -1,0 +1,16 @@
+{
+  "name" : "agrigorenko/IT328/pets2",
+  "authors" : [
+    {
+      "name" : "Eugene Mishkin",
+      "email" : "emishkin@greenriver.edu"
+    },
+    {
+      "name" : "Alex Grigorenko",
+      "email" : "Agrigorenko@mail.greenriver.edu"
+    }
+  ],
+  "require" : {
+    "bcosca/fatfree-core" : "dev-master"
+  }
+}
