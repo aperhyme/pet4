@@ -1,6 +1,6 @@
 <?php
 
-class rottweiler extends Dog
+class Rottweiler extends Dog
 {
     function play()
     {

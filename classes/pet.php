@@ -21,7 +21,7 @@ class Pet
 
     function talk()
     {
-        echo "Pet is Talking<br>";
+        echo $this->_name. " is talking<br>";
     }
 
     function getName()
