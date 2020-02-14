@@ -51,6 +51,7 @@ class Routes
         if($_SERVER['REQUEST_METHOD'] == 'POST') {
             $this->_f3->set('name', $_POST['name']);
             $this->_f3->set('passedColor', $_POST['color']);
+            $this->_f3->set('passedType', $_POST['type']);
 
             $valid = true;
             if (isset($_POST['color']) && validColor($_POST['color'])) {
@@ -58,6 +59,13 @@ class Routes
             } else {
                 $valid = false;
                 $this->_f3->set("errors['color']", "Please enter a color");
+            }
+
+            if (isset($_POST['type']) && validType($_POST['type'])) {
+                $_SESSION['animal']->setType($_POST['type']);
+            } else {
+                $valid = false;
+                $this->_f3->set("errors['type']", "Please enter a type");
             }
 
             $animalName = $_POST['name'];

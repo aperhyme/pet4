@@ -13,6 +13,7 @@ session_start();
 // Instantiate F3
 $f3 = Base::instance();
 $f3->set('colors', array('pink', 'green', 'blue'));
+$f3->set('types', array('rottweiler', 'pitbull', 'unknown'));
 
 //calling controller
 $controller = new Routes($f3);

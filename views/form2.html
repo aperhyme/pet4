@@ -31,6 +31,26 @@
             <br>
         </div>
         <br>
+
+        <br>
+        <div>
+            <check if="{{ isset(@errors['type']) }}">
+                <p>{{ @errors['type']}}</p>
+            </check>
+            <select class="form-control" name="type" id="type">
+                <option>Select a type:</option>
+                <repeat group="{{ @types }}" value="{{ @typeOption }}">
+                    <option value="{{ @typeOption }}"
+                    <check if="{{ @passedType == @typeOption }}">
+                        selected
+                    </check>
+                    >{{ @typeOption }}</option>
+
+                </repeat>
+            </select>
+        </div>
+        <br>
+
         <button type="submit">Submit</button>
     </form>
 </body>
